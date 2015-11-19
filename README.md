@@ -1,7 +1,7 @@
 # scrapy_deepin_bbs
-用scrapy采集Deepin论坛列表信息(测试)
-
-顺便推广下Deepin
+用scrapy采集[Deepin论坛](http://bbs.deepin.org/)列表信息(测试)  
+顺便推广下Deepin  
+[Deepin](http://www.deepin.org/)是非常好用的中文linux发行版，本人日常使用的系统。  
 
 # 创建scrapy_deepin_bbs的过程
 
