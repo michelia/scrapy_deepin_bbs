@@ -31,6 +31,8 @@ class DeepinBbsSpider(CrawlSpider):
                 i['last_reply_time'] = article.css('div.last-reply div.z span.z a span::attr(title)').extract()[0]
             except IndexError, e:
                 print e
+                i['post_date'] = article.css('td.article-info div.z span::text').extract()[0].strip()
+                i['last_reply_time'] = article.css('div.last-reply div.z span.z a::text').extract()[0].strip()
             i['last_reply_name'] = article.css('div.last-reply cite a::text').extract()[0].strip()
             i['reply_num'] = article.css('div.replies a::text').extract()[0].strip()
             yield i
