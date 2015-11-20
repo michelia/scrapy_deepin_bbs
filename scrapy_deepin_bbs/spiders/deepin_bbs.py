@@ -22,11 +22,15 @@ class DeepinBbsSpider(CrawlSpider):
             #i['name'] = response.xpath('//div[@id="name"]').extract()
             #i['description'] = response.xpath('//div[@id="description"]').extract()
 
-            i['title'] = article.css('td.common a.xst::text').extract()[0]
-            # i['forum_plate'] = article.css
-            # i['autor_name'] = article.css
-            # i['post_date'] = article.css
-            # i['last_reply_name'] = article.css
-            # i['last_reply_time'] = article.css
-            # i['reply_num'] = article.css
+            i['article_title'] = article.css('td.common a.xst::text').extract()[0]
+            i['article_id'] = article.css('td.common a.xst::attr(href)').re(r'tid=(\d+)')[0]
+            i['forum_plate'] = article.css('div.forum a::text').extract()[0]
+            i['author_name'] = article.css('div.author cite a::text').extract()[0]
+            try:
+                i['post_date'] = article.css('div.z span span::attr(title)').extract()[0]
+                i['last_reply_time'] = article.css('div.last-reply div.z span.z a span::attr(title)').extract()[0]
+            except IndexError, e:
+                print e
+            i['last_reply_name'] = article.css('div.last-reply cite a::text').extract()[0].strip()
+            i['reply_num'] = article.css('div.replies a::text').extract()[0].strip()
             yield i

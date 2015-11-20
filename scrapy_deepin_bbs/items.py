@@ -10,9 +10,10 @@ import scrapy
 
 class ScrapyDeepinBbsItem(scrapy.Item):
     # define the fields for your item here like:
-    title = scrapy.Field()
+    article_title = scrapy.Field()
+    article_id = scrapy.Field()
     forum_plate = scrapy.Field()
-    autor_name = scrapy.Field()
+    author_name = scrapy.Field()
     post_date = scrapy.Field()
     last_reply_name = scrapy.Field()
     last_reply_time = scrapy.Field()

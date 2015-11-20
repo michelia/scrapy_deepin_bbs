@@ -108,13 +108,18 @@ USER_AGENTS = [
 ]
 
 PROXIES = [
-    # 代理IP可以网上搜索一下，下面的代理IP获取自：http://www.xici.net.co/。
+    # 代理IP可以网上搜索一下，下面的代理IP获取自： http://www.xici.net.co/
     # 代理会失效，需要取网上动态获取
-    {'ip_port': '112.25.41.136:80', 'user_pass': ''},
-    {'ip_port': '120.198.236.10:80', 'user_pass': ''},
-    {'ip_port': '218.200.66.196:8080', 'user_pass': ''},
-    {'ip_port': '182.90.21.206:80', 'user_pass': ''},
-    {'ip_port': '182.90.10.50:80', 'user_pass': ''},
-    {'ip_port': '220.248.224.242:8089', 'user_pass': ''},
+    {'ip_port': '36.234.86.178:8888', 'user_pass': ''},
+    {'ip_port': '182.90.41.158:80', 'user_pass': ''},
+    {'ip_port': '202.123.106.26:80', 'user_pass': ''},
+    {'ip_port': '118.170.35.250:8888', 'user_pass': ''},
+    {'ip_port': '115.46.67.158:8123', 'user_pass': ''},
+    {'ip_port': '121.31.86.217:8123', 'user_pass': ''},
 ]
+
+
+
+
+
 
